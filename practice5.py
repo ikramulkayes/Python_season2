@@ -17,8 +17,8 @@ timmy.speed("fastest")
 
 
 def gapingfunc(gap):
-    for i in range(360//gap):
+    for i in range(360//gap):#because circle is 360 degree and the gap is gap you know
         timmy.color(rancolor())
         timmy.circle(100)
-        timmy.setheading(timmy.heading()+gap)
+        timmy.setheading(timmy.heading()+gap)  #timmy.heading() means the position of the circle on screen
 gapingfunc(3)
