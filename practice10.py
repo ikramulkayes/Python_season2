@@ -1,7 +1,7 @@
 import turtle as t
 import time                  #connected with practice11.py
 screen = t.Screen()
-class Snake:
+class Snake():
     def __init__(self):
         self.lst = []
         self.createsnake()
@@ -37,4 +37,6 @@ class Snake:
     def left(self):
         if self.lst[0].heading() != 0:
             self.lst[0].setheading(180)
+    def distancefromfood(self,parameters):
+        return self.lst[0].distance(parameters)
     
