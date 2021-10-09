@@ -23,14 +23,21 @@ screen.onkey(snake.down,"s")
 screen.onkey(snake.right,"d")
 screen.onkey(snake.left,"a")
 
-
-while True:
+game_on_off = True
+while game_on_off:
     snake.movesnake()
     screen.update()
     time.sleep(0.1)
     if snake.distancefromfood(food) < 15:
         food.refresh()
+        snake.extendsnake()
         score.increase()
+    if snake.distancefromwall():
+        game_on_off = False
+        score.gameover()
+    if snake.hitwithtail():
+        game_on_off = False
+        score.gameover()
 
 
 
