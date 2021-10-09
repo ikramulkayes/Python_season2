@@ -4,17 +4,30 @@ screen = t.Screen()
 class Snake():
     def __init__(self):
         self.lst = []
+        self.count = 0
         self.createsnake()
-
+        
     def createsnake(self):
-        count = 0
-        for i in range(5):
+        
+        for i in range(2):
+            self.addsegments()
+
+    def addsegments(self):
             timmy = t.Turtle(shape="square")
             timmy.color("white")
             timmy.penup()
-            timmy.goto(x=count,y=0)
-            count = count - 20
+            timmy.goto(x=self.count,y=0)
+            self.count = self.count - 20
             self.lst.append(timmy)
+    def extendsnake(self):
+        self.addsegments()
+
+
+
+
+
+
+
     def movesnake(self):
         
             screen.update() #update the screen
@@ -39,4 +52,17 @@ class Snake():
             self.lst[0].setheading(180)
     def distancefromfood(self,parameters):
         return self.lst[0].distance(parameters)
+    def distancefromwall(self):
+        if self.lst[0].xcor() > 280 or self.lst[0].xcor() < -280 or self.lst[0].ycor() > 280 or self.lst[0].ycor() < -280:
+            return True
+    def hitwithtail(self):
+
+        for i in self.lst[1:]:
+            #print(i)
+            #print(self.lst[0].heading())
+            
+
+            if self.lst[0].distance(i) < 10 :
+                print("GG")
+                return True
     
