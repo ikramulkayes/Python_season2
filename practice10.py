@@ -63,6 +63,6 @@ class Snake():
             
 
             if self.lst[0].distance(i) < 10 :
-                print("GG")
+                #print("GG")
                 return True
     
