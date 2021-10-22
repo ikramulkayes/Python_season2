@@ -18,9 +18,9 @@ def clear():
     timmy.home()
     timmy.pendown()
 screen.listen()
-screen.onkey(key="w",fun=move_forward)
+screen.onkey(key="w",fun=move_forward)  #move_forward() is not used because it will directly call the function
 screen.onkey(key="s",fun=backwars)
-screen.onkey(key="a",fun=counter_clock)
+screen.onkey(key="a",fun=counter_clock) 
 screen.onkey(key="d",fun=clock)
 screen.onkey(key="c",fun=clear)
 screen.exitonclick()
