@@ -1,3 +1,4 @@
 import os
 
-cwd = os.getcwd()  # Get the current working directory (cwd)
+path = 'F:\\Github\\Python_season2'
+os.chdir(path)
