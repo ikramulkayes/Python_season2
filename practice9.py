@@ -16,8 +16,8 @@ for i in range(5):
     count = count - 20
     lst.append(timmy)
 while True:
-    screen.update()
-    time.sleep(0.1)
+    screen.update() #update the screen
+    time.sleep(0.1) #make delay
     for i in range(len(lst)-1,0,-1):
         new_x =lst[i-1].xcor()
         new_y = lst[i-1].ycor()
