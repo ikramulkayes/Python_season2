@@ -1,3 +1,5 @@
+import pandas as pd
+
 word = "ApplE"
 upcount = 0
 locount = 0
